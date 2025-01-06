@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Error Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text is visible.
+  </div>
+
+  <script>
+    // Accessing an element and handling potential null values
+    const myElement = document.getElementById("myDiv");
+    if (myElement) {
+      myElement.innerHTML = "Text updated successfully.";
+    } else {
+      console.error("Element 'myDiv' not found. Please check your HTML.");
+    }
+
+    //Example of accessing non-existent element and handling the error
+    const nonExistentElement = document.getElementById("nonExistentElement");
+    if(nonExistentElement){
+        nonExistentElement.innerHTML = "This will not be displayed";
+    } else {
+        console.error("Element not found. This is expected behavior");
+    }
+  </script>
+</body>
+</html>
